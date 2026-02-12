@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Smoothly transition all background and text colors */
+  *,
+  *::before,
+  *::after {
+    @apply transition-colors duration-500 ease-in-out;
+  }
+
+  body {
+    /* Soft Ivory for Light, Deep Charcoal (not black) for Dark */
+    @apply bg-[#FDFBF7] text-[#1A1A1A] dark:bg-[#121212] dark:text-[#E4E4E7];
+  }
+}
+
+/* Custom Scrollbar for the modal content */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-zinc-700 rounded-full;
+}
+
+/* Custom Scrollbar for the modal content */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
